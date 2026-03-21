@@ -12,10 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
-        with:
-          repository: nostrability/schemata-kt
-          path: ../schemata-kt
+      - name: Clone schemata-kt
+        run: git clone https://github.com/nostrability/schemata-kt.git ../schemata-kt
 
       - uses: actions/setup-java@v4
         with:
@@ -24,4 +22,4 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v3
 
-      - run: ./gradlew test
+      - run: gradle test
