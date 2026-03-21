@@ -1,5 +1,7 @@
 # schemata-validator-kt
 
+[![Test](https://github.com/nostrability/schemata-validator-kt/actions/workflows/test.yml/badge.svg)](https://github.com/nostrability/schemata-validator-kt/actions/workflows/test.yml)
+
 Kotlin/JVM validator for [Nostr](https://nostr.com/) protocol JSON schemas. This is the Kotlin equivalent of [`schemata-validator-rs`](https://github.com/nostrability/schemata-validator-rs), built on top of [`schemata-kt`](https://github.com/nostrability/schemata-kt).
 
 Validates Nostr events, NIP-11 documents, and protocol messages against the canonical [schemata](https://github.com/nostrability/schemata) definitions using Draft-07 JSON Schema via [networknt/json-schema-validator](https://github.com/networknt/json-schema-validator).
