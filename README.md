@@ -1,6 +1,7 @@
 # schemata-validator-kt
 
 [![Test](https://github.com/nostrability/schemata-validator-kt/actions/workflows/test.yml/badge.svg)](https://github.com/nostrability/schemata-validator-kt/actions/workflows/test.yml)
+[![](https://jitpack.io/v/nostrability/schemata-validator-kt.svg)](https://jitpack.io/#nostrability/schemata-validator-kt)
 
 Kotlin/JVM validator for [Nostr](https://nostr.com/) protocol JSON schemas. This is the Kotlin equivalent of [`schemata-validator-rs`](https://github.com/nostrability/schemata-validator-rs), built on top of [`schemata-kt`](https://github.com/nostrability/schemata-kt).
 
@@ -28,17 +29,28 @@ Not good for:
 - Validating every incoming event at runtime
 - Hot paths where latency matters
 
-## Usage
+## Installation
 
-Add as a **test dependency**:
+### JitPack (recommended)
+
+```kotlin
+// settings.gradle.kts or build.gradle.kts
+repositories {
+    maven("https://jitpack.io")
+}
+
+dependencies {
+    testImplementation("com.github.nostrability:schemata-validator-kt:v0.1.0")
+}
+```
+
+### Local composite build (for development)
 
 ```kotlin
 // settings.gradle.kts
 includeBuild("../schemata-kt")
 includeBuild("../schemata-validator-kt")
-```
 
-```kotlin
 // build.gradle.kts
 dependencies {
     testImplementation("nostrability:schemata-validator-kt")
